@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant - The Gourmet Place</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #333;
+        }
+        .navbar-nav .nav-link {
+            color: white;
+            font-size: 1.1rem;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ff6347;
+        }
+        .hero-section {
+            background-image: url('https://via.placeholder.com/1600x600'); 
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .menu-table th, .menu-table td {
+            text-align: center;
+            padding: 15px;
+        }
+        .menu-table {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .menu-table td {
+            background-color: #f9f9f9;
+        }
+        .menu-item:hover {
+            background-color: #ff6347;
+            color: white;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        .contact-form input, .contact-form textarea {
+            margin-bottom: 15px;
+        }
+        .contact-form button {
+            background-color: #ff6347;
+            color: white;
+        }
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">The Gourmet Place</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#menu">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero-section">
+    <h1>Welcome to The Gourmet Place</h1>
+    <p>Fine dining with a touch of elegance</p>
+</section>
+
+<!-- Menu Section -->
+<section id="menu" class="container my-5">
+    <h2 class="text-center mb-4">Our Menu</h2>
+    <table class="table table-bordered menu-table">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="menu-item">
+                <td>Chapathi</td>
+                <td>Classic Indian pluffy chapathis.</td>
+                <td>$15.00</td>
+            </tr>
+            <tr class="menu-item">
+                <td>Grilled Chicken</td>
+                <td>Freshly grilled Chicken with a Mayonaise.</td>
+                <td>$210.00</td>
+            </tr>
+            <tr class="menu-item">
+                <td>Fried Fish</td>
+                <td>Classic fried fish with tomato sauce.</td>
+                <td>$25.00</td>
+            </tr>
+            <tr class="menu-item">
+                <td>Chef's Special Chicken Briyani</td>
+                <td>Juicy chicken with Raita and gravy. <span class="badge bg-danger">New</span></td>
+                <td>$300.00</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4 class="text-center mt-5">Chef's Recommendations</h4>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Lobster Bisque - A rich and creamy soup made from fresh lobster.</li>
+        <li class="list-group-item">Truffle Fries - Crispy fries topped with truffle oil and parmesan.</li>
+        <li class="list-group-item">Chocolate Lava Cake - A decadent dessert with molten chocolate inside.</li>
+    </ul>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="container my-5">
+    <h2 class="text-center mb-4">Gallery</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4 gallery">
+        <div class="col">
+            <img src="https://via.placeholder.com/600x400" alt="Dish 1" class="img-fluid">
+        </div>
+        <div class="col">
+            <img src="https://via.placeholder.com/600x400" alt="Dish 2" class="img-fluid">
+        </div>
+        <div class="col">
+            <img src="https://via.placeholder.com/600x400" alt="Dish 3" class="img-fluid">
+        </div>
+    </div>
+</section>
+
+<!-- Video Tour Section -->
+<section class="container my-5">
+    <h2 class="text-center mb-4">Take a Tour of Our Restaurant</h2>
+    <div class="text-center">
+        <iframe width="80%" height="500" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Restaurant Tour Video" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+</section>
+
+<!-- Contact Us Section -->
+<section id="contact" class="container my-5">
+    <h2 class="text-center mb-4">Contact Us & Reservations</h2>
+    <form class="contact-form">
+        <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" required>
+        </div>
+        <div class="mb-3">
+            <label for="reservation-date" class="form-label">Reservation Date</label>
+            <input type="date" class="form-control" id="reservation-date" required>
+        </div>
+        <div class="mb-3">
+            <label for="special-requests" class="form-label">Special Requests</label>
+            <textarea class="form-control" id="special-requests" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-danger w-100">Submit Reservation</button>
+    </form>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4">
+    <p>&copy; 2025 The Gourmet Place. All Rights Reserved.</p>
+</footer>
+
+<!-- Bootstrap JS and Dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
