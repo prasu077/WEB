@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Slider</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+    img {
+      width: 500px;
+      height: 300px;
+      object-fit: cover;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Simple Image Slider</h2>
+  <img id="sliderImage" src="" alt="Slider Image">
+  <br>
+  <button onclick="prevImage()">Previous</button>
+  <button onclick="nextImage()">Next</button>
+
+  <script>
+    // Array of image URLs
+    const images = [
+      'https://via.placeholder.com/500x300/FF5733/ffffff?text=Image+1',
+      'https://via.placeholder.com/500x300/33B5FF/ffffff?text=Image+2',
+      'https://via.placeholder.com/500x300/75FF33/ffffff?text=Image+3',
+      'https://via.placeholder.com/500x300/F033FF/ffffff?text=Image+4'
+    ];
+
+    let currentIndex = 0;
+
+    // Show first image on page load
+    const sliderImage = document.getElementById('sliderImage');
+    sliderImage.src = images[currentIndex];
+
+    // Function to show next image
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      sliderImage.src = images[currentIndex];
+    }
+
+    // Function to show previous image
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      sliderImage.src = images[currentIndex];
+    }
+  </script>
+
+</body>
+</html>
