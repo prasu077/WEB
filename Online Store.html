@@ -1,0 +1,231 @@
+#Homepage
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Online Store</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f0f0f0; margin: 0; padding: 0; }
+        header { background-color: #333; color: white; padding: 10px; text-align: center; }
+        nav { text-align: center; margin: 20px 0; }
+        nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; }
+        section { padding: 20px; text-align: center; }
+        footer { text-align: center; background-color: #333; color: white; padding: 10px; position: fixed; width: 100%; bottom: 0; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Online Store!</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="orderform.html">Order Form</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <section>
+        <h2>Special Promotions!</h2>
+        <p>Don't miss out on our <b><i>seasonal sale</i></b>! <u>Up to 50% off</u> on selected items!</p>
+        <p>Explore our amazing products and get the best deals!</p>
+        <ul>
+            <li><a href="products.html">Browse Our Products</a></li>
+            <li><a href="orderform.html">Order Now</a></li>
+            <li><a href="gallery.html">Visit Our Gallery</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Online Store. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+#Products page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Online Store</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f0f0f0; margin: 0; padding: 0; }
+        header { background-color: #333; color: white; padding: 10px; text-align: center; }
+        nav { text-align: center; margin: 20px 0; }
+        nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; }
+        section { padding: 20px; text-align: center; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        table, th, td { border: 1px solid #333; }
+        th, td { padding: 10px; text-align: center; }
+        th { background-color: #4CAF50; color: white; }
+        footer { text-align: center; background-color: #333; color: white; padding: 10px; position: fixed; width: 100%; bottom: 0; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Products</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="orderform.html">Order Form</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <section>
+        <h2>Featured Products</h2>
+        <table>
+            <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><b>Smartphone</b></td>
+                <td>$499</td>
+                <td><i>Latest model with all features.</i> <u>Buy now and save 20%!</u></td>
+            </tr>
+            <tr>
+                <td><b>Laptop</b></td>
+                <td>$899</td>
+                <td>High-performance laptop for professionals. <u>Limited time offer!</u></td>
+            </tr>
+            <tr>
+                <td><b>Headphones</b></td>
+                <td>$99</td>
+                <td>Noise-cancelling, high-quality sound.</td>
+            </tr>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Online Store. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+#Orders form page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form - Online Store</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f0f0f0; margin: 0; padding: 0; }
+        header { background-color: #333; color: white; padding: 10px; text-align: center; }
+        nav { text-align: center; margin: 20px 0; }
+        nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; }
+        section { padding: 20px; text-align: center; }
+        footer { text-align: center; background-color: #333; color: white; padding: 10px; position: fixed; width: 100%; bottom: 0; }
+        form { max-width: 600px; margin: 0 auto; background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
+        label { display: block; margin: 10px 0 5px; }
+        input, select, textarea { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; }
+        button { background-color: #4CAF50; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Order Form</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="orderform.html">Order Form</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <section>
+        <h2>Place Your Order</h2>
+        <form action="#" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="product">Select Product:</label>
+            <select id="product" name="product" required>
+                <option value="smartphone">Smartphone</option>
+                <option value="laptop">Laptop</option>
+                <option value="headphones">Headphones</option>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required>
+
+            <label for="payment">Payment Method:</label>
+            <select id="payment" name="payment" required>
+                <option value="card">Card</option>
+                <option value="cash">Cash on Delivery</option>
+            </select>
+
+            <label for="agree">
+                <input type="checkbox" id="agree" name="agree" required> I agree to the store policies
+            </label>
+
+            <button type="submit">Submit Order</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Online Store. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+#Gallery page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Online Store</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f0f0f0; margin: 0; padding: 0; }
+        header { background-color: #333; color: white; padding: 10px; text-align: center; }
+        nav { text-align: center; margin: 20px 0; }
+        nav a { margin: 0 15px; text-decoration: none; color: #333; font-weight: bold; }
+        section { padding: 20px; text-align: center; }
+        footer { text-align: center; background-color: #333; color: white; padding: 10px; position: fixed; width: 100%; bottom: 0; }
+        video, audio { display: block; margin: 20px auto; max-width: 90%; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Product Gallery</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="orderform.html">Order Form</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <section>
+        <h2>Audio and Video Highlights</h2>
+
+        <h3>Promotional Message</h3>
+        <audio controls>
+            <source src="promo-message.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <h3>Product Showcase Video</h3>
+        <video controls poster="product-showcase.jpg">
+            <source src="product-showcase.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Online Store. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
