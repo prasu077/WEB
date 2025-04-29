@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product - E-Commerce Store</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS */
+        .product-title { font-size: 2rem; font-weight: bold; color: #333; }
+        .price { font-size: 1.5rem; color: #28a745; font-weight: bold; }
+        .reviews { color: #6c757d; }
+        .product-description { margin-top: 20px; }
+        .product-specs { margin-top: 20px; }
+        .product-img { max-width: 100%; height: auto; }
+        .add-to-cart-btn, .buy-now-btn { font-size: 1.1rem; padding: 10px 20px; }
+        .add-to-cart-btn:hover, .buy-now-btn:hover { opacity: 0.8; }
+        .badge-new { background-color: #f44336; }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">E-Commerce Store</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!-- Product Section -->
+<div class="container my-5">
+    <div class="row">
+        <!-- Product Image & Details -->
+        <div class="col-md-6">
+            <img src="https://via.placeholder.com/500" alt="Product Image" class="product-img" />
+        </div>
+
+        <!-- Product Info -->
+        <div class="col-md-6">
+            <h2 class="product-title">Product Name</h2>
+            <span class="badge rounded-pill badge-new">New Arrival</span>
+            <p class="price">$299.99</p>
+            <p class="reviews">★★★★★ 4.8/5 (200 Reviews)</p>
+            <p>Product description goes here. The product is made from high-quality materials and offers excellent performance. A detailed description of its features can be found here.</p>
+
+            <!-- Key Features -->
+            <ul class="list-group">
+                <li class="list-group-item">Feature 1: High quality material</li>
+                <li class="list-group-item">Feature 2: Long-lasting</li>
+                <li class="list-group-item">Feature 3: Affordable price</li>
+            </ul>
+
+            <!-- Product Specifications Table -->
+            <div class="product-specs">
+                <h5>Specifications</h5>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Size</th>
+                        <td>Medium</td>
+                    </tr>
+                    <tr>
+                        <th>Color</th>
+                        <td>Red</td>
+                    </tr>
+                    <tr>
+                        <th>Material</th>
+                        <td>Cotton</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Purchase Buttons -->
+            <div class="d-flex justify-content-between">
+                <button class="btn btn-primary add-to-cart-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal">Add to Cart</button>
+                <button class="btn btn-success buy-now-btn">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Related Products -->
+    <div class="mt-5">
+        <h4>Related Products</h4>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/200" class="card-img-top" alt="Related Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Related Product 1</h5>
+                        <p class="card-text">$199.99</p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/200" class="card-img-top" alt="Related Product 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Related Product 2</h5>
+                        <p class="card-text">$249.99</p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/200" class="card-img-top" alt="Related Product 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Related Product 3</h5>
+                        <p class="card-text">$179.99</p>
+                        <a href="#" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms and Conditions -->
+    <div class="mt-5">
+        <p><a href="#">View Terms & Conditions</a></p>
+    </div>
+</div>
+
+<!-- Modal for Quick View -->
+<div class="modal fade" id="quickViewModal" tabindex="-1" aria-labelledby="quickViewModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="quickViewModalLabel">Quick View</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="https://via.placeholder.com/500" alt="Product Image" class="img-fluid" />
+                <p>Product description goes here. A quick overview of the product.</p>
+                <p><strong>Price:</strong> $299.99</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-light text-center py-4">
+    <p>&copy; 2025 E-Commerce Store. All Rights Reserved.</p>
+</footer>
+
+<!-- Bootstrap JS and Dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</
+
