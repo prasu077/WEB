@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alumni Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+
+    h2 {
+      color: #2c3e50;
+    }
+
+    form, table {
+      margin-top: 20px;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"], input[type="url"] {
+      width: 300px;
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f4f4f4;
+    }
+
+    .submit-btn {
+      padding: 8px 16px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Alumni Details Form</h2>
+
+  <form id="alumniForm">
+    <label>Name:</label><br>
+    <input type="text" id="name" required><br>
+
+    <label>Degree:</label><br>
+    <input type="text" id="degree" required><br>
+
+    <label>Batch Passed Out:</label><br>
+    <input type="text" id="batch" required><br>
+
+    <label>LinkedIn Profile:</label><br>
+    <input type="url" id="linkedin" required><br>
+
+    <label>Phone No:</label><br>
+    <input type="tel" id="phone" required><br>
+
+    <label>Mail ID:</label><br>
+    <input type="email" id="email" required><br><br>
+
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+
+  <h2>Submitted Details</h2>
+  <table id="detailsTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Degree</th>
+        <th>Batch Passed Out</th>
+        <th>LinkedIn Profile</th>
+        <th>Phone No</th>
+        <th>Mail ID</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Details will be added here -->
+    </tbody>
+  </table>
+
+  <script>
+    const form = document.getElementById('alumniForm');
+    const tableBody = document.getElementById('detailsTable').querySelector('tbody');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Get form values
+      const name = document.getElementById('name').value;
+      const degree = document.getElementById('degree').value;
+      const batch = document.getElementById('batch').value;
+      const linkedin = document.getElementById('linkedin').value;
+      const phone = document.getElementById('phone').value;
+      const email = document.getElementById('email').value;
+
+      // Create a new row
+      const newRow = tableBody.insertRow();
+
+      newRow.innerHTML = `
+        <td>${name}</td>
+        <td>${degree}</td>
+        <td>${batch}</td>
+        <td><a href="${linkedin}" target="_blank">LinkedIn</a></td>
+        <td>${phone}</td>
+        <td>${email}</td>
+      `;
+
+      // Reset form
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
